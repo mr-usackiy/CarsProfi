@@ -1,0 +1,224 @@
+@import "./nullstyle";
+@import "./fonts";
+
+%serv_btn{
+	border: none;
+	border-radius: 30px;
+	font-weight: 700;
+	font-size: 46px;
+	line-height: 63px;
+	color: #FFFFFF;
+	&:hover{
+		overflow: hidden;
+		transition: 0.4s;
+		transform: scale(1.1);
+	}
+	&:active{
+		color: red;
+		transition: none;
+	}
+}
+
+body{
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	color: white;
+	font-size: 24px;
+	background: #F2F2F2;
+}
+
+h1{
+	font-family: 'Big Shoulders Stencil Display';
+	font-weight: 900;
+	font-size: 114px;
+	line-height: 136px;
+	letter-spacing: 0.13em;
+	color: #000000;
+}
+// Hedaer styles start
+.header {
+	position: fixed;
+	padding-top: 30px;
+	width: 100%;
+}
+.wrapper {
+	max-width: 1633px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.header__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.header__active {
+	display: flex;
+	max-width: 583px;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.header__phone {
+	margin-right: 40px;
+	font-weight: 300;
+	&::before{
+		content: url(../img/ico/phone-ico.svg);
+	}
+}
+.header__btn {
+	border: 2px solid #FFFFFF;
+	background: none;
+	color: white;
+	max-width: 240px;
+	padding: 7px 32px;
+	margin-right: 40px;
+	font-size: 19px;
+	line-height: 26px;
+}
+// Hedaer styles end
+// Main styles start
+.main{
+	background-image: linear-gradient(106.8deg, rgba(255, 255, 255, 0.23) 9%, rgba(255, 255, 255, 0.23) 14.52%, rgba(255, 255, 255, 0.23) 14.53%, rgba(255, 255, 255, 0.23) 14.54%, rgba(255, 255, 255, 0.23) 35.58%, rgba(33, 29, 29, 0.23) 62.56%, rgba(34, 6, 6, 0.23) 76.34%), url(../img/start-page__bg.jpg);
+	background-size: cover;
+	height: 100vh;
+	margin-bottom: 200px;
+	.wrapper{
+		position: relative;
+	}
+}
+.main__title{
+	padding-top: 258px;
+	padding-bottom: 450px;
+	p{
+		font-weight: 700;
+		font-size: 64px;
+		line-height: 87px;
+		letter-spacing: 0.21em;
+		color: #000000;
+	}
+}
+.main__info{
+	display: flex;
+	align-items: baseline;
+	font-weight: 300;
+	position: absolute;
+	right: 0;
+}
+.main__time::before{
+	content: url(../img/ico/time-ico.svg);
+	margin-right: 25px;
+}
+.main__location{
+	margin-left: 67px;
+	&::before{
+		content: url(../img/ico/map-ico.svg);
+		margin-top: 20px;
+		margin-right: 25px;
+	}
+}
+// Main styles end
+// About styles start
+.about__container {
+	padding: 60px 20px;
+	background-color: #c4c4c4;
+	display: flex;
+	justify-content: space-around;
+	border-radius: 60px;
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.about__title {
+	color: blue;
+	margin-bottom: 10px;
+	span{
+		font-family: 'Big Shoulders Stencil Display';
+	}
+}
+.about__subtitle {
+	color: black;
+	font-size: 54px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.about__text {
+	max-width: 700px;
+	color: #4a4a4a;
+}
+// About styles end
+// Service styles start
+.service {
+	margin-top: 100px;
+	background: url(../img/avtoservis-back.jpg) no-repeat;
+	background-size: cover;
+	margin-bottom: 250px;
+}
+.service__grid {
+	padding: 100px 0;
+	display: grid;
+	grid-template-columns: minmax(250px,1fr) minmax(250px,1fr) minmax(250px,1fr);
+	grid-template-rows: minmax(270px,365px) minmax(270px,365px);
+	gap: 30px;
+	button{
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+	}
+}
+.service__item1{
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item1.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+.service__item2 {
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item2.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+.service__item3 {
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item3.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+.service__item4 {
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item4.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+.service__item5 {
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item5.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+.service__item6 {
+	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item6.jpg);
+	background-size: cover;
+	@extend %serv_btn;
+}
+// Service styles end
+
+
+
+
+
+// .burger__line{
+// 	display: block;
+// 	width: 100%;
+// 	height: 2px;
+// 	background-color: white;
+
+// 	left: 0;
+// }
+// .burger__line_first{
+// 	top: 0;
+// }
+// .burger__line_second{
+// 	top: 50%;
+// 	-webkit-transform: translateY(-50%);
+// 	    -ms-transform: translateY(-50%);
+// 	        transform: translateY(-50%);
+// }
+// .burger__line_third{
+// 	bottom: 0;
+// }

@@ -43,7 +43,7 @@ h1{
 	width: 100%;
 }
 .wrapper {
-	max-width: 1633px;
+	max-width: 80%;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -152,7 +152,6 @@ h1{
 	margin-top: 100px;
 	background: url(../img/avtoservis-back.jpg) no-repeat;
 	background-size: cover;
-	margin-bottom: 250px;
 }
 .service__grid {
 	padding: 100px 0;
@@ -197,7 +196,84 @@ h1{
 	@extend %serv_btn;
 }
 // Service styles end
+// Why styles start
+.why {
+	margin-top: 250px;
+	margin-bottom: 250px;
+	.wrapper{
+		background: rgba(179, 183, 213, 0.35);
+		border-radius: 30px;
+		padding: 30px;
+	}
+}
+.why__title {
+	font-weight: 700;
+	font-size: 53px;
+	line-height: 41px;
+	letter-spacing: 0.03em;
+	color: #472DAC;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.why__container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+.why__item {
+	display: flex;
+	align-items: center;
+}
+.why__text {
+	color: #000000;
+	max-width: 310px;
+	font-size: 30px;
+	line-height: 45px;
+	letter-spacing: -0.075em;
+	span{
+		font-weight: 700;
+	}
+}
 
+
+
+// .why__container {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+// .why__line1{
+// 	display: flex;
+// 	flex-direction: row;
+// 	justify-content: space-between;
+
+// }
+// .why__item1 {
+// 	display: flex;
+// 	color: #000;
+// 	align-items: center;
+// }
+// .why__text{
+// 	max-width: 310px;
+// 	font-size: 30px;
+// 	line-height: 45px;
+// 	letter-spacing: -0.075em;
+// 	span{
+// 		font-weight: 700;
+// 	}
+// }
+.why__item2 {
+}
+.why__item3 {
+}
+.why__item4 {
+}
+.why__item5 {
+}
+.why__item6 {
+}
+
+
+// Why styles end
 
 
 

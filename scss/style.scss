@@ -5,7 +5,7 @@
 	border: none;
 	border-radius: 30px;
 	font-weight: 700;
-	font-size: 46px;
+	font-size: 34px;
 	line-height: 63px;
 	color: #FFFFFF;
 	&:hover{
@@ -24,33 +24,45 @@ body{
 	font-style: normal;
 	font-weight: 400;
 	color: white;
-	font-size: 24px;
+	font-size: 20px;
 	background: #F2F2F2;
 }
 
 h1{
 	font-family: 'Big Shoulders Stencil Display';
 	font-weight: 900;
-	font-size: 114px;
+	font-size: 106px;
 	line-height: 136px;
 	letter-spacing: 0.13em;
 	color: #000000;
+}
+h2{
+	font-weight: 700;
+	font-size: 38px;
+	line-height: 41px;
+	letter-spacing: 0.03em;
+	color: #472DAC;
+	text-align: center;
 }
 // Hedaer styles start
 .header {
 	position: fixed;
 	padding-top: 30px;
 	width: 100%;
+	img{
+		display: block;
+		width: 80%;
+	}
 }
 .wrapper {
-	max-width: 80%;
+	max-width: 1450px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
 .header__body {
 	display: flex;
 	justify-content: space-between;
-	align-items: flex-start;
+	align-items: center;
 }
 .header__active {
 	display: flex;
@@ -88,10 +100,10 @@ h1{
 }
 .main__title{
 	padding-top: 258px;
-	padding-bottom: 450px;
+	padding-bottom: 530px;
 	p{
 		font-weight: 700;
-		font-size: 64px;
+		font-size: 60px;
 		line-height: 87px;
 		letter-spacing: 0.21em;
 		color: #000000;
@@ -103,21 +115,25 @@ h1{
 	font-weight: 300;
 	position: absolute;
 	right: 0;
+	bottom: 0;
 }
 .main__time::before{
 	content: url(../img/ico/time-ico.svg);
-	margin-right: 25px;
+	margin-right: 15px;
 }
 .main__location{
-	margin-left: 67px;
+	margin-left: 35px;
 	&::before{
 		content: url(../img/ico/map-ico.svg);
 		margin-top: 20px;
-		margin-right: 25px;
+		margin-right: 15px;
 	}
 }
 // Main styles end
 // About styles start
+.about{
+	margin-bottom: 170px;
+}
 .about__container {
 	padding: 60px 20px;
 	background-color: #c4c4c4;
@@ -138,20 +154,21 @@ h1{
 }
 .about__subtitle {
 	color: black;
-	font-size: 54px;
+	font-size: 38px;
 	font-weight: 700;
 	margin-bottom: 20px;
 }
 .about__text {
 	max-width: 700px;
 	color: #4a4a4a;
+	line-height: 30px;
 }
 // About styles end
 // Service styles start
 .service {
-	margin-top: 100px;
 	background: url(../img/avtoservis-back.jpg) no-repeat;
 	background-size: cover;
+	margin-bottom: 250px;
 }
 .service__grid {
 	padding: 100px 0;
@@ -198,21 +215,14 @@ h1{
 // Service styles end
 // Why styles start
 .why {
-	margin-top: 250px;
 	margin-bottom: 250px;
 	.wrapper{
 		background: rgba(179, 183, 213, 0.35);
 		border-radius: 30px;
-		padding: 30px;
+		padding-top: 30px;
 	}
 }
 .why__title {
-	font-weight: 700;
-	font-size: 53px;
-	line-height: 41px;
-	letter-spacing: 0.03em;
-	color: #472DAC;
-	text-align: center;
 	margin-bottom: 50px;
 }
 .why__container{
@@ -227,53 +237,65 @@ h1{
 .why__text {
 	color: #000000;
 	max-width: 310px;
-	font-size: 30px;
-	line-height: 45px;
+	font-size: 26px;
+	line-height: 36px;
 	letter-spacing: -0.075em;
 	span{
 		font-weight: 700;
 	}
 }
-
-
-
-// .why__container {
-// 	display: flex;
-// 	flex-direction: column;
-// }
-// .why__line1{
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: space-between;
-
-// }
-// .why__item1 {
-// 	display: flex;
-// 	color: #000;
-// 	align-items: center;
-// }
-// .why__text{
-// 	max-width: 310px;
-// 	font-size: 30px;
-// 	line-height: 45px;
-// 	letter-spacing: -0.075em;
-// 	span{
-// 		font-weight: 700;
-// 	}
-// }
-.why__item2 {
-}
-.why__item3 {
-}
-.why__item4 {
-}
-.why__item5 {
-}
-.why__item6 {
-}
-
-
 // Why styles end
+// Works styles start
+.works {
+	margin-bottom: 300px;
+}
+.works__title {
+	margin-bottom: 60px;
+}
+.works__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	button{
+		background: none;
+		border: none;
+	}
+}
+// Works styles end
+// Map styles start
+.map {
+	background: linear-gradient(284.12deg, rgba(5, 40, 131, 0) -1%, rgba(3, 3, 6, 0.49692) 40.78%, rgba(0, 0, 0, 0.38) 99.57%), url(../img/map-back.jpg) no-repeat;
+	background-size: cover;
+	padding: 120px 0;
+}
+.map__container {
+	display: flex;
+	justify-content: space-between;
+	iframe{
+		border-radius: 30px;
+	}
+}
+.map__text {
+	padding-top: 100px;
+	p:first-child{
+		font-size: 40px;
+		line-height: 41px;
+		letter-spacing: 0.03em;
+		margin-bottom: 60px;
+	}
+
+	.main__location{
+		margin: 0 0 30px 0;
+	}
+}
+// Map styles end
+// Footer styles start
+
+
+// Footers styles end
+
+
+
 
 
 

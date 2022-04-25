@@ -408,7 +408,7 @@ textarea {
   border: none;
   border-radius: 30px;
   font-weight: 700;
-  font-size: 46px;
+  font-size: 34px;
   line-height: 63px;
   color: #FFFFFF;
 }
@@ -432,17 +432,26 @@ body {
   font-style: normal;
   font-weight: 400;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   background: #F2F2F2;
 }
 
 h1 {
   font-family: 'Big Shoulders Stencil Display';
   font-weight: 900;
-  font-size: 114px;
+  font-size: 106px;
   line-height: 136px;
   letter-spacing: 0.13em;
   color: #000000;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 41px;
+  letter-spacing: 0.03em;
+  color: #472DAC;
+  text-align: center;
 }
 
 .header {
@@ -451,8 +460,13 @@ h1 {
   width: 100%;
 }
 
+.header img {
+  display: block;
+  width: 80%;
+}
+
 .wrapper {
-  max-width: 80%;
+  max-width: 1450px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -464,9 +478,9 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__active {
@@ -515,12 +529,12 @@ h1 {
 
 .main__title {
   padding-top: 258px;
-  padding-bottom: 450px;
+  padding-bottom: 530px;
 }
 
 .main__title p {
   font-weight: 700;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 87px;
   letter-spacing: 0.21em;
   color: #000000;
@@ -536,21 +550,26 @@ h1 {
   font-weight: 300;
   position: absolute;
   right: 0;
+  bottom: 0;
 }
 
 .main__time::before {
   content: url(../img/ico/time-ico.svg);
-  margin-right: 25px;
+  margin-right: 15px;
 }
 
 .main__location {
-  margin-left: 67px;
+  margin-left: 35px;
 }
 
 .main__location::before {
   content: url(../img/ico/map-ico.svg);
   margin-top: 20px;
-  margin-right: 25px;
+  margin-right: 15px;
+}
+
+.about {
+  margin-bottom: 170px;
 }
 
 .about__container {
@@ -580,7 +599,7 @@ h1 {
 
 .about__subtitle {
   color: black;
-  font-size: 54px;
+  font-size: 38px;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -588,12 +607,13 @@ h1 {
 .about__text {
   max-width: 700px;
   color: #4a4a4a;
+  line-height: 30px;
 }
 
 .service {
-  margin-top: 100px;
   background: url(../img/avtoservis-back.jpg) no-repeat;
   background-size: cover;
+  margin-bottom: 250px;
 }
 
 .service__grid {
@@ -650,23 +670,16 @@ h1 {
 }
 
 .why {
-  margin-top: 250px;
   margin-bottom: 250px;
 }
 
 .why .wrapper {
   background: rgba(179, 183, 213, 0.35);
   border-radius: 30px;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .why__title {
-  font-weight: 700;
-  font-size: 53px;
-  line-height: 41px;
-  letter-spacing: 0.03em;
-  color: #472DAC;
-  text-align: center;
   margin-bottom: 50px;
 }
 
@@ -691,11 +704,70 @@ h1 {
 .why__text {
   color: #000000;
   max-width: 310px;
-  font-size: 30px;
-  line-height: 45px;
+  font-size: 26px;
+  line-height: 36px;
   letter-spacing: -0.075em;
 }
 
 .why__text span {
   font-weight: 700;
+}
+
+.works {
+  margin-bottom: 300px;
+}
+
+.works__title {
+  margin-bottom: 60px;
+}
+
+.works__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works__container button {
+  background: none;
+  border: none;
+}
+
+.map {
+  background: linear-gradient(284.12deg, rgba(5, 40, 131, 0) -1%, rgba(3, 3, 6, 0.49692) 40.78%, rgba(0, 0, 0, 0.38) 99.57%), url(../img/map-back.jpg) no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+}
+
+.map__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.map__container iframe {
+  border-radius: 30px;
+}
+
+.map__text {
+  padding-top: 100px;
+}
+
+.map__text p:first-child {
+  font-size: 40px;
+  line-height: 41px;
+  letter-spacing: 0.03em;
+  margin-bottom: 60px;
+}
+
+.map__text .main__location {
+  margin: 0 0 30px 0;
 }

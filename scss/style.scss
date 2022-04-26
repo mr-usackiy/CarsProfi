@@ -18,7 +18,9 @@
 		transition: none;
 	}
 }
-
+@mixin serv_btn-media {
+	font-size: 26px;	
+}
 body{
 	font-family: 'Open Sans';
 	font-style: normal;
@@ -27,7 +29,12 @@ body{
 	font-size: 20px;
 	background: #F2F2F2;
 }
-
+.wrapper {
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 0 20px;
+	overflow: hidden;
+}
 h1{
 	font-family: 'Big Shoulders Stencil Display';
 	font-weight: 900;
@@ -38,7 +45,7 @@ h1{
 }
 h2{
 	font-weight: 700;
-	font-size: 38px;
+	font-size: 32px;
 	line-height: 41px;
 	letter-spacing: 0.03em;
 	color: #472DAC;
@@ -49,30 +56,47 @@ h2{
 	position: fixed;
 	padding-top: 30px;
 	width: 100%;
+	z-index: 99999;
 	img{
 		display: block;
-		width: 80%;
+		width: 70%;
 	}
 }
-.wrapper {
-	max-width: 1450px;
-	margin: 0 auto;
-	padding: 0 20px;
+.header_active{
+	background: #c4c4c491;
+	padding: 0;
+	.header__phone{
+		a{
+			color: black;
+			font-weight: 400;
+		}
+	}
+	.header__btn{
+		border: 2px solid black;
+		color: #000000;
+	}
+	.burger__line{
+		background-color: #000000;
+	}
 }
 .header__body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.header__active {
+.header__action {
 	display: flex;
 	max-width: 583px;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: center;
 }
 .header__phone {
-	margin-right: 40px;
-	font-weight: 300;
+	a{
+		margin-right: 40px;
+		font-weight: 300;
+		text-decoration: none;
+		color: white;
+	}
 	&::before{
 		content: url(../img/ico/phone-ico.svg);
 	}
@@ -86,21 +110,48 @@ h2{
 	margin-right: 40px;
 	font-size: 19px;
 	line-height: 26px;
+	&:hover{
+		color: red;
+		border: 2px solid red;
+	}
+
 }
-// Hedaer styles end
+.header__burger{
+	width: 40px;
+	height: 28px;
+	position: relative;
+}
+.burger__line{
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: white;
+	position: absolute;
+	left: 0;
+}
+.burger__line_first{
+	top: 0;
+}
+.burger__line_second{
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+.burger__line_third{
+	bottom: 0;
+}
+// Header styles end
 // Main styles start
 .main{
 	background-image: linear-gradient(106.8deg, rgba(255, 255, 255, 0.23) 9%, rgba(255, 255, 255, 0.23) 14.52%, rgba(255, 255, 255, 0.23) 14.53%, rgba(255, 255, 255, 0.23) 14.54%, rgba(255, 255, 255, 0.23) 35.58%, rgba(33, 29, 29, 0.23) 62.56%, rgba(34, 6, 6, 0.23) 76.34%), url(../img/start-page__bg.jpg);
 	background-size: cover;
 	height: 100vh;
 	margin-bottom: 200px;
-	.wrapper{
-		position: relative;
-	}
+	position: relative;
 }
 .main__title{
 	padding-top: 258px;
-	padding-bottom: 530px;
 	p{
 		font-weight: 700;
 		font-size: 60px;
@@ -114,8 +165,8 @@ h2{
 	align-items: baseline;
 	font-weight: 300;
 	position: absolute;
-	right: 0;
-	bottom: 0;
+	right: 160px;
+	bottom: 50px;
 }
 .main__time::before{
 	content: url(../img/ico/time-ico.svg);
@@ -182,35 +233,32 @@ h2{
 		justify-content: center;
 	}
 }
+.service__item{
+	@extend %serv_btn;
+}
 .service__item1{
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item1.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 .service__item2 {
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item2.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 .service__item3 {
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item3.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 .service__item4 {
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item4.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 .service__item5 {
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item5.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 .service__item6 {
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item6.jpg);
 	background-size: cover;
-	@extend %serv_btn;
 }
 // Service styles end
 // Why styles start
@@ -236,7 +284,6 @@ h2{
 }
 .why__text {
 	color: #000000;
-	max-width: 310px;
 	font-size: 26px;
 	line-height: 36px;
 	letter-spacing: -0.075em;
@@ -290,33 +337,90 @@ h2{
 }
 // Map styles end
 // Footer styles start
-
-
+.footer {
+	background: #0F0E18;
+	padding: 20px 0; 
+}
+.wrapper-min {
+	max-width: 50%;
+}
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	li{
+		margin-bottom: 10px;
+		&:first-child{
+			font-weight: 700;
+			font-size: 20px;
+			margin-bottom: 40px;
+		}
+	}
+	a{
+		font-size: 14px;
+		line-height: 2px;
+		letter-spacing: 0.03em;
+		color: #888888;
+		text-decoration: none;
+	}
+	img{
+		transform: translateX(50px);
+	}
+}
 // Footers styles end
+// Media start
+@media screen and (max-width: 1450px){
+	body{
+		font-size: 16px;
+	}
+	h1{
+		font-size: 92px;
+	}
+	.header__btn{
+		font-size: 16px;
+	}
+	.main__title{
+		p{
+			font-size: 48px;
+		}
+	}
+	.about__subtitle{
+		font-size: 28px;
+	}
+	.about__container{
+		img{
+			width: 80%;
+		}
+	}
+	.service__grid{
+		gap: 20px;
+	}
+	.service__item{
+		@include serv_btn-media;
+	}
+	.why__text{
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.why__item img{
+		width: 40%;
+	}
+	.footer__container{
+		li{
+			&:first-child{
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
+		}
+		a{
+			font-size: 12px;
+		}
+	}
+}
+
+
+// Media end
 
 
 
 
 
-
-
-// .burger__line{
-// 	display: block;
-// 	width: 100%;
-// 	height: 2px;
-// 	background-color: white;
-
-// 	left: 0;
-// }
-// .burger__line_first{
-// 	top: 0;
-// }
-// .burger__line_second{
-// 	top: 50%;
-// 	-webkit-transform: translateY(-50%);
-// 	    -ms-transform: translateY(-50%);
-// 	        transform: translateY(-50%);
-// }
-// .burger__line_third{
-// 	bottom: 0;
-// }

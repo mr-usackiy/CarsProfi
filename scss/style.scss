@@ -1,7 +1,7 @@
 @import "./nullstyle";
 @import "./fonts";
 
-%serv_btn{
+@mixin serv_btn-media{
 	border: none;
 	border-radius: 30px;
 	font-weight: 700;
@@ -18,9 +18,7 @@
 		transition: none;
 	}
 }
-@mixin serv_btn-media {
-	font-size: 26px;	
-}
+
 body{
 	font-family: 'Open Sans';
 	font-style: normal;
@@ -59,7 +57,7 @@ h2{
 	z-index: 99999;
 	img{
 		display: block;
-		width: 70%;
+		width: 60%;
 	}
 }
 .header_active{
@@ -147,11 +145,11 @@ h2{
 	background-image: linear-gradient(106.8deg, rgba(255, 255, 255, 0.23) 9%, rgba(255, 255, 255, 0.23) 14.52%, rgba(255, 255, 255, 0.23) 14.53%, rgba(255, 255, 255, 0.23) 14.54%, rgba(255, 255, 255, 0.23) 35.58%, rgba(33, 29, 29, 0.23) 62.56%, rgba(34, 6, 6, 0.23) 76.34%), url(../img/start-page__bg.jpg);
 	background-size: cover;
 	height: 100vh;
-	margin-bottom: 200px;
+	margin-bottom: 10%;
 	position: relative;
 }
 .main__title{
-	padding-top: 258px;
+	padding-top: 250px;
 	p{
 		font-weight: 700;
 		font-size: 60px;
@@ -165,7 +163,7 @@ h2{
 	align-items: baseline;
 	font-weight: 300;
 	position: absolute;
-	right: 160px;
+	right: 10%;
 	bottom: 50px;
 }
 .main__time::before{
@@ -180,10 +178,16 @@ h2{
 		margin-right: 15px;
 	}
 }
+.main__phone{
+	display: none;
+}
 // Main styles end
 // About styles start
 .about{
-	margin-bottom: 170px;
+	margin-bottom: 10%;
+	.wrapper{
+		max-width: 70%;
+	}
 }
 .about__container {
 	padding: 60px 20px;
@@ -214,12 +218,15 @@ h2{
 	color: #4a4a4a;
 	line-height: 30px;
 }
+.about__img{
+	display: inline-block;
+}
 // About styles end
 // Service styles start
 .service {
 	background: url(../img/avtoservis-back.jpg) no-repeat;
 	background-size: cover;
-	margin-bottom: 250px;
+	margin-bottom: 15%;
 }
 .service__grid {
 	padding: 100px 0;
@@ -234,7 +241,7 @@ h2{
 	}
 }
 .service__item{
-	@extend %serv_btn;
+	@include serv_btn-media();
 }
 .service__item1{
 	background: linear-gradient(285.21deg, rgba(5, 40, 131, 0.58) 6.56%, rgba(3, 3, 6, 0.49692) 45.18%, rgba(0, 0, 0, 0.38) 99.54%), url(../img/item1.jpg);
@@ -263,7 +270,7 @@ h2{
 // Service styles end
 // Why styles start
 .why {
-	margin-bottom: 250px;
+	margin-bottom: 15%;
 	.wrapper{
 		background: rgba(179, 183, 213, 0.35);
 		border-radius: 30px;
@@ -271,7 +278,7 @@ h2{
 	}
 }
 .why__title {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 .why__container{
 	display: grid;
@@ -294,7 +301,7 @@ h2{
 // Why styles end
 // Works styles start
 .works {
-	margin-bottom: 300px;
+	margin-bottom: 15%;
 }
 .works__title {
 	margin-bottom: 60px;
@@ -314,6 +321,10 @@ h2{
 	background: linear-gradient(284.12deg, rgba(5, 40, 131, 0) -1%, rgba(3, 3, 6, 0.49692) 40.78%, rgba(0, 0, 0, 0.38) 99.57%), url(../img/map-back.jpg) no-repeat;
 	background-size: cover;
 	padding: 120px 0;
+	iframe{
+		width: 50vw;
+		height: 60vh;
+	}
 }
 .map__container {
 	display: flex;
@@ -324,13 +335,13 @@ h2{
 }
 .map__text {
 	padding-top: 100px;
+	margin-right: 10px;
 	p:first-child{
 		font-size: 40px;
 		line-height: 41px;
 		letter-spacing: 0.03em;
 		margin-bottom: 60px;
 	}
-
 	.main__location{
 		margin: 0 0 30px 0;
 	}
@@ -347,6 +358,9 @@ h2{
 .footer__container {
 	display: flex;
 	justify-content: space-between;
+	ul{
+		margin-right: 5px;
+	}	
 	li{
 		margin-bottom: 10px;
 		&:first-child{
@@ -377,6 +391,7 @@ h2{
 	}
 	.header__btn{
 		font-size: 16px;
+		padding: 4px 25px;
 	}
 	.main__title{
 		p{
@@ -386,16 +401,18 @@ h2{
 	.about__subtitle{
 		font-size: 28px;
 	}
-	.about__container{
-		img{
-			width: 80%;
-		}
+	.about__text{
+		max-width: 1000px;
+	}
+	.about__img{
+		display: inline-block;
 	}
 	.service__grid{
+		grid-template-rows: repeat(2, minmax(150px,270px));
 		gap: 20px;
 	}
 	.service__item{
-		@include serv_btn-media;
+		font-size: 28px;
 	}
 	.why__text{
 		font-size: 18px;
@@ -416,11 +433,142 @@ h2{
 		}
 	}
 }
-
-
+@media screen and (max-width: 1000px){
+	body{
+		font-size: 14px;
+	}
+	h1{
+		font-size: 74px;
+		line-height: 80px;
+	}
+	h2{
+		font-size: 24px;
+	}
+	.header__btn{
+		font-size: 14px;
+		padding: 4px 25px;
+	}
+	.header__burger{
+		width: 35px;
+		height: 20px;
+	}
+	.main__title{
+		p{
+			font-size: 40px;
+			letter-spacing: 0.1em;
+		}
+	}
+	.about__container{
+		align-items: center;
+	}
+	.about__subtitle{
+		font-size: 22px;
+	}
+	.about__text{
+		line-height: 18px;
+	}
+	.service__grid{
+		display: grid;
+		grid-template-columns: repeat(2, minmax(120px,380px));
+		grid-template-rows: repeat(3, minmax(120px,250px));
+	}
+	.why__text{
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.map{
+		padding: 80px 0;
+		iframe{
+			width: 75vw;
+		}
+	}
+	.map__container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.map__text{
+		display: flex;
+		align-items: baseline;
+		padding: 0;
+		p{
+			&:first-child{
+				display: none;
+			}
+		}
+	}
+}
+@media screen and (max-width: 750px){
+	body{
+		font-size: 12px;
+	}
+	h1{
+		font-size: 64px;
+		line-height: 70px;
+	}
+	h2{
+		font-size: 20px;
+	}
+	.header__phone{
+		display: none;
+	}
+	.main__title{
+		p{
+			font-size: 36px;
+			letter-spacing: 0.1em;
+		}
+	}
+	.main__info{
+		justify-content: space-between;
+		.main__location{
+			margin: 0;
+		}
+		.main__phone{
+			display: block;
+		}
+		a{
+			margin: 0;
+		}
+	}
+	.about__subtitle{
+		font-size: 18px;
+	}
+	.service__item{
+		font-size: 20px;
+	}
+	.why{
+		.wrapper{
+			padding-top: 5px;
+		}
+	}
+	.why__title{
+		margin: 0;
+	}
+	.why__container{
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	}
+	.why__item img{
+		width: 30%;
+	}
+	.footer{
+		.wrapper-min{
+			min-width: 60%;
+		}
+	}
+	.footer__container{
+		li{
+			&:first-child{
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+		}
+		a{
+			font-size: 10px;
+		}
+		img{
+			transform: translateX(30px);
+			width: 25%;
+		}
+	}
+}
 // Media end
-
-
-
-
-

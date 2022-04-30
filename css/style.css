@@ -451,7 +451,7 @@ h2 {
 }
 
 .header_active {
-  background: #c4c4c491;
+  background: rgba(179, 183, 213, 0.55);
   padding: 0;
 }
 
@@ -607,12 +607,12 @@ h2 {
 }
 
 .about .wrapper {
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .about__container {
-  padding: 60px 20px;
-  background-color: #c4c4c4;
+  padding: 94px 125px;
+  background-color: rgba(179, 183, 213, 0.35);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

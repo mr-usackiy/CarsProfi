@@ -189,9 +189,12 @@ h2{
 		max-width: 70%;
 	}
 }
+.about__body{
+	margin-right: 10px;
+}
 .about__container {
 	padding: 60px 20px;
-	background-color: #c4c4c4;
+	background-color: rgba(179, 183, 213, 0.35);
 	display: flex;
 	justify-content: space-around;
 	border-radius: 60px;
@@ -459,6 +462,7 @@ h2{
 		}
 	}
 	.about__container{
+		padding: 30px 20px;
 		align-items: center;
 	}
 	.about__subtitle{
@@ -487,9 +491,13 @@ h2{
 		align-items: center;
 	}
 	.map__text{
+		width: 80%;
 		display: flex;
 		align-items: baseline;
 		padding: 0;
+		.main__location{
+			margin-right: 20px;
+		}
 		p{
 			&:first-child{
 				display: none;
@@ -518,6 +526,7 @@ h2{
 		}
 	}
 	.main__info{
+		width: 80%;
 		justify-content: space-between;
 		.main__location{
 			margin: 0;
@@ -530,6 +539,7 @@ h2{
 		}
 	}
 	.about__subtitle{
+		margin-bottom: 10px;
 		font-size: 18px;
 	}
 	.service__item{

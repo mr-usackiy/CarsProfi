@@ -1028,6 +1028,8 @@ h2 {
     letter-spacing: 0.1em;
   }
   .main__info {
+     width: 80%;
+     right:10%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

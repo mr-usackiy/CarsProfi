@@ -443,6 +443,7 @@ h2 {
   padding-top: 30px;
   width: 100%;
   z-index: 99999;
+  transition: 0.5s;
 }
 
 .header img {

@@ -304,6 +304,99 @@ h2{
 	}
 }
 // Why styles end
+//----------------------------------------------------------------slaider__start--------------------------------------------------------------------
+.gallery-title {
+  text-align: center;
+  font-size: 30px;
+  font-family: open sans;
+  color: rgb(23, 37, 157);
+}
+.gallery-slider {
+  max-width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.btn-back {
+  border: none;
+  background-color:rgba(255, 255, 255, 0);
+  transform: rotate(180deg);
+  transition: 0.5s ease;
+  filter: drop-shadow(0px -10px 20px rgba(0, 0, 0, 0.54));
+}
+.btn-back:hover {
+  transform: rotate(180deg) translateX(5px);
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+.btn-next{
+  border: none;
+  background-color:rgba(255, 255, 255, 0);
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.54));
+}
+.btn-next:hover {
+  transform: translateX(5px);
+  transition: 0.5s ease;
+  opacity: 0.8;
+}
+@keyframes one {
+  30% {
+    transform: rotateY(20deg) translateX(10px);
+    transition: 0.3s;
+  }
+  100% {
+    transform: translateX(-55%) scale(1.4);
+    z-index: 3;
+    filter: drop-shadow(-5px 20px 30px rgba(0, 0, 0, 0.861));
+  }
+}
+.gallery-wrapper{
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 90vh;
+}
+.gallery-line {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  transform: translateX(0);
+  transition: 1s;
+}
+.gallery-item{
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    max-height:60vh;
+    border-radius: 15px;
+    transition: 0.7s;
+    z-index: 2;
+    filter: drop-shadow(-10px 14px 20px rgba(0, 0, 0, 0.54));
+    &:first-child:hover {
+      transform: translateX(50px) scale(1.2);
+      filter: drop-shadow(0px 30px 20px rgba(0, 0, 0, 0.631));
+    }
+    &:first-child {
+      filter: drop-shadow(10px 24px 20px rgba(0, 0, 0, 0.54));
+    }
+    &:last-child {
+      max-height: 50vh;
+      transition: 1s;
+      transform: translateX(-60px);
+      z-index: 1;
+      &:hover {
+        animation: 2s one ease;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}
+//----------------------------------------------------------------slaider__end-----------------------------------------------------------------------
+
+
+
 // Works styles start
 .works {
 	margin-bottom: 15%;

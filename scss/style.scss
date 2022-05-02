@@ -115,7 +115,35 @@ h2{
 	}
 
 }
+.header__nav{
+	display: none;
+}
+.header__list{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.header__item{
+	margin-right: 82px;
+}
+.header__item:last-child{
+	margin-right: 0;
+}
+
+.header__link{
+	font-size: 18px;
+	line-height: 24px;
+	color: white;
+	text-decoration: none;
+}
+
+.header__link:hover, .header__link:focus, .header__link:active{
+	opacity: .75;
+}
 .header__burger{
+	display: none;
 	width: 40px;
 	height: 28px;
 	position: relative;
@@ -610,6 +638,70 @@ h2{
 	h2{
 		font-size: 20px;
 	}
+	.header__burger {
+		display: block;
+   }
+   .header__nav{
+	   display: block;
+	   width: 100%;
+	   height: 100%;
+	   position: fixed;
+	   top: 0;
+	   left: 0;
+	   background: url(../img/burger-back1.jpg) no-repeat;
+	   background-size: cover;
+	   z-index: 10;
+	   padding: 75px;
+	   -webkit-transform: translateX(100%);
+		   -ms-transform: translateX(100%);
+			   transform: translateX(100%);
+	   -webkit-transition: .3s all linear;
+	   -o-transition: .3s all linear;
+	   transition: .3s all linear;
+   }
+   .header__nav_active{
+	   -webkit-transform:translateX(0);
+		   -ms-transform:translateX(0);
+			   transform:translateX(0);
+   }
+   .header__item{
+	   width: 100%;
+	   margin-right: 0;
+	   margin-bottom: 30px;
+   }
+   .header__item:last-child{
+	   margin-bottom: 0;
+   }
+   .header__link{
+	   font-size: 42px;
+	   line-height: 48px;
+   }
+   .header__nav-close{
+	   width: 40px;
+	   height: 40px;
+	   position: absolute;
+	   top: 40px;
+	   right: 180px;
+	   z-index: 11;
+   }
+   .header__nav-close-line{
+	   display: block;
+	   width: 100%;
+	   height: 2px;
+	   background-color: white;
+	   position: absolute;
+	   top: 50%;
+   }
+   .header__nav-close-line:first-child{
+	   -webkit-transform: translateY(-50%) rotate(45deg);
+		   -ms-transform: translateY(-50%) rotate(45deg);
+			   transform: translateY(-50%) rotate(45deg);
+   }
+   .header__nav-close-line:last-child{
+	   -webkit-transform: translateY(-50%) rotate(-45deg);
+		   -ms-transform: translateY(-50%) rotate(-45deg);
+			   transform: translateY(-50%) rotate(-45deg);
+   }
 	.header__action{
 		.header__btn{
 			display: none;
@@ -684,6 +776,7 @@ h2{
 		}
 	}
 }
+
 @media screen and (max-width: 550px) {
 	h1{
 		font-size: 52px;
@@ -727,6 +820,7 @@ h2{
 		display: none;
 	}
 	.service__grid{
+		padding: 40px 0;
 		grid-template-columns: repeat(1, minmax(120px,380px));
 		grid-template-rows: repeat(6, minmax(120px,250px));
 		justify-content: center;

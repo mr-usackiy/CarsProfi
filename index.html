@@ -13,18 +13,38 @@
 		<div class="wrapper">
 			<div class="header__body">
 				<div class="header__logo">
-					<img src="./img/ico/cars-logo.png" alt="logo-CarsProfi">
+					<a href="#"><img src="./img/ico/cars-logo.png" alt="logo-CarsProfi"></a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="#service" class="header__link js-scroll">Наши услуги</a>
+						</li>
+						<li class="header__item">
+							<a href="#works" class="header__link js-scroll">Наши работы</a>
+						</li>
+						<li class="header__item">
+							<a href="#address" class="header__link js-scroll">Наш адрес</a>
+						</li>
+						<li class="header__item">
+							<a href="#contacts" class="header__link js-scroll">Наши контакты</a>
+						</li>
+						<div class="header__nav-close">
+							<span class="header__nav-close-line"></span>
+							<span class="header__nav-close-line"></span>
+						</div>
+					</ul>
+				</nav>
+				<div class="header__burger burger">
+					<span class="burger__line burger__line_first "></span>
+					<span class="burger__line burger__line_second"></span>
+					<span class="burger__line burger__line_third"></span>
 				</div>
 				<div class="header__action">
 					<div class="header__phone">
 						<a href="tel:+79269609100">+7 926 960 91 00</a>	
 					</div>
 					<button class="header__btn">Записаться онлайн</button>
-					<div class="header__burger">
-						<span class="burger__line burger__line_first "></span>
-						<span class="burger__line burger__line_second"></span>
-						<span class="burger__line burger__line_third"></span>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -69,23 +89,23 @@
 	</div>
 	<div class="service">
 		<div class="wrapper">
-			<div class="service__grid">
-				<button class="service__item service__item1">
+			<div class="service__grid" id="service">
+				<button class="service__item service__item1" id="chassis-repair">
 					Ремонт ходовой
 				</button>
-				<button class="service__item service__item2">
+				<button class="service__item service__item2" id="body-repair">
 					Кузовной ремонт
 				</button>
-				<button class="service__item service__item3">
+				<button class="service__item service__item3" id="auto-electrician">
 					Автоэлектрика
 				</button>
-				<button class="service__item service__item4">
+				<button class="service__item service__item4" id="tire-fitting">
 					Шиномонтаж
 				</button>
-				<button class="service__item service__item5">
+				<button class="service__item service__item5" id="painting-works">
 					Малярные работы
 				</button>
-				<button class="service__item service__item6">
+				<button class="service__item service__item6" id="planned-works"> 
 					Плановые работы
 				</button>
 			</div>
@@ -136,39 +156,39 @@
 			</div>
 		</div>
 	</div>		
-	<section class="gallery">
+	<section class="gallery" id="works">
 	    <div class="wrapper">
 	      <div class="gallery-slider">
 		<button class="btn-back">
-		  <img src="/images/arrow1.svg" alt="arrow" width="60px"/>
+		  <img src="/img/ico/arrow.svg" alt="arrow" width="60px"/>
 		</button>
 		<div class="gallery-wrapper">
 		  <div class="gallery-line">
 		    <div class="gallery-item">
-		      <img src="/images/p1.jpg" alt="car" class="gallery-pic1" />
-		      <img src="/images/p2.jpg" alt="car" class="gallery-pic2" />
+		      <img src="/img/work1.jpg" alt="car" class="gallery-pic1" />
+		      <img src="/img/work2.jpg" alt="car" class="gallery-pic2" />
 		    </div>
 		    <div class="gallery-item">
-		      <img src="/images/p3.jpg" alt="car" class="gallery-pic1" />
-		      <img src="/images/p4.jpg" alt="car" class="gallery-pic2" />
+		      <img src="/img/work3.jpg" alt="car" class="gallery-pic1" />
+		      <img src="/img/work4.jpg" alt="car" class="gallery-pic2" />
 		    </div>
 		    <div class="gallery-item">
-		      <img src="/images/p6.jpeg" alt="car" class="gallery-pic1" />
-		      <img src="/images/p5.jpeg" alt="car" class="gallery-pic2" />
+		      <img src="/img/work5.jpeg" alt="car" class="gallery-pic1" />
+		      <img src="/img/work6.jpeg" alt="car" class="gallery-pic2" />
 		    </div>
 		    <div class="gallery-item">
-		      <img src="/images/p1.jpg" alt="car" class="gallery-pic1" />
-		      <img src="/images/p2.jpg" alt="car" class="gallery-pic2" />
+		      <img src="/img/work1.jpg" alt="car" class="gallery-pic1" />
+		      <img src="/img/work2.jpg" alt="car" class="gallery-pic2" />
 		    </div>
 		  </div>
 		</div>
 		<button class="btn-next">
-		  <img src="/images/arrow1.svg" alt="arrow" width="60px" />
+		  <img src="/img/ico/arrow.svg" alt="arrow" width="60px" />
 		</button>
 	      </div>
 	   </div>
     	</section>
-	<div class="map">
+	<div class="map" id="address">
 		<div class="wrapper">
 			<div class="map__container">
 				<div class="map__text">
@@ -185,19 +205,19 @@
 			<div class="footer__container">
 				<ul>
 					<li class="footer__title">Услуги</li>
-					<li><a href="#!">Автосервис</a></li>
-					<li><a href="#!">Диагностика</a></li>
-					<li><a href="#!">Шиномонтаж</a></li>
-					<li><a href="#!">Выездной мастер</a></li>
-					<li><a href="#!">Автомалярные работы</a></li>
-					<li><a href="#!">Кузовные работы</a></li>
+					<li><a href="#chassis-repair" class="js-scroll">Ремонт ходовой</a></li>
+					<li><a href="#body-repair" class="js-scroll">Кузовной ремонт</a></li>
+					<li><a href="#auto-electrician" class="js-scroll">Автоэлектрика</a></li>
+					<li><a href="#tire-fitting" class="js-scroll">Шиномонтаж</a></li>
+					<li><a href="#painting-works" class="js-scroll">Малярные работы</a></li>
+					<li><a href="#planned-works" class="js-scroll">Плановые работы</a></li>
 				</ul>
 				<ul>
-					<li class="footer__title">Контакты</li>
+					<li class="footer__title" id="contacts">Контакты</li>
 					<li><a href="tel:+79269609100">+7 926 960 91 00 </a></li>
 					<li><a href="mailto:zubpav@mail.ru">ZUBPAV@MAIL.RU</a></li>
 					<li><a href="#!">г. Чехов ул. Чехова 20в</a></li>
-					<li><a href="#!"><img class="vk-ico"src="./img/ico/vk-ico.png" alt=""></a></li>
+					<li><a href="https://vk.com/carsprofi"><img class="vk-ico"src="./img/ico/vk-ico.png" alt="vk-ico"></a></li>
 				</ul>
 				<ul>
 					<li class="footer__title">Компания</li>

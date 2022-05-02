@@ -612,11 +612,8 @@ h2 {
   margin-bottom: 10%;
 }
 
-.about .wrapper {
-  max-width: 70%;
-}
-
 .about__body {
+  padding-left: 20px;
   margin-right: 10px;
 }
 
@@ -1145,6 +1142,7 @@ h2 {
         -ms-flex-align: center;
             align-items: center;
     margin: 0;
+    padding-left: 10px;
   }
   .about__text {
     line-height: 16px;

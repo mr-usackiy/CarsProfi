@@ -189,11 +189,9 @@ h2{
 // About styles start
 .about{
 	margin-bottom: 10%;
-	.wrapper{
-		max-width: 70%;
-	}
 }
 .about__body{
+	padding-left: 20px;
 	margin-right: 10px;
 }
 .about__container {
@@ -627,6 +625,7 @@ h2{
 		flex-direction: column;
 		align-items: center;
 		margin: 0;
+		padding-left: 10px;
 	}
 	.about__text{
 		line-height: 16px;

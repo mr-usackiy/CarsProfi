@@ -1,6 +1,7 @@
 /* big-shoulders-stencil-display-800 - latin */
 @font-face {
 	font-family: 'Big Shoulders Stencil Display';
+	font-display: swap;
 	font-style: normal;
 	font-weight: 800;
 	src: local(''),
@@ -11,6 +12,7 @@
   @font-face {
 	font-family: 'Big Shoulders Stencil Display';
 	font-style: normal;
+	font-display: swap;
 	font-weight: 900;
 	src: local(''),
 		 url('../fonts/big-shoulders-stencil-display-v19-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
@@ -19,6 +21,7 @@
 /* open-sans-regular - latin_cyrillic */
 @font-face {
 	font-family: 'Open Sans';
+	font-display: fallback;
 	font-style: normal;
 	font-weight: 400;
 	src: local(''),
@@ -28,6 +31,7 @@
   /* open-sans-700 - latin_cyrillic */
   @font-face {
 	font-family: 'Open Sans';
+	font-display: swap;
 	font-style: normal;
 	font-weight: 700;
 	src: local(''),
@@ -37,6 +41,7 @@
 /* open-sans-300 - latin_cyrillic */
 @font-face {
 	font-family: 'Open Sans';
+	font-display: fallback;
 	font-style: normal;
 	font-weight: 300;
 	src: local(''),

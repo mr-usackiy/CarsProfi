@@ -362,6 +362,7 @@ textarea {
 /* big-shoulders-stencil-display-800 - latin */
 @font-face {
   font-family: 'Big Shoulders Stencil Display';
+  font-display: swap;
   font-style: normal;
   font-weight: 800;
   src: local(""), url("../fonts/big-shoulders-stencil-display-v19-latin-800.woff2") format("woff2"), url("../fonts/big-shoulders-stencil-display-v19-latin-800.woff") format("woff");
@@ -372,6 +373,7 @@ textarea {
 @font-face {
   font-family: 'Big Shoulders Stencil Display';
   font-style: normal;
+  font-display: swap;
   font-weight: 900;
   src: local(""), url("../fonts/big-shoulders-stencil-display-v19-latin-900.woff2") format("woff2"), url("../fonts/big-shoulders-stencil-display-v19-latin-900.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
@@ -380,6 +382,7 @@ textarea {
 /* open-sans-regular - latin_cyrillic */
 @font-face {
   font-family: 'Open Sans';
+  font-display: fallback;
   font-style: normal;
   font-weight: 400;
   src: local(""), url("../fonts/open-sans-v28-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/open-sans-v28-latin_cyrillic-regular.woff") format("woff");
@@ -389,6 +392,7 @@ textarea {
 /* open-sans-700 - latin_cyrillic */
 @font-face {
   font-family: 'Open Sans';
+  font-display: swap;
   font-style: normal;
   font-weight: 700;
   src: local(""), url("../fonts/open-sans-v28-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/open-sans-v28-latin_cyrillic-700.woff") format("woff");
@@ -398,6 +402,7 @@ textarea {
 /* open-sans-300 - latin_cyrillic */
 @font-face {
   font-family: 'Open Sans';
+  font-display: fallback;
   font-style: normal;
   font-weight: 300;
   src: local(""), url("../fonts/open-sans-v28-latin_cyrillic-300.woff2") format("woff2"), url("../fonts/open-sans-v28-latin_cyrillic-300.woff") format("woff");
@@ -491,9 +496,9 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .header__phone a {

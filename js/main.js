@@ -94,11 +94,11 @@ window.onload = function () {
     scrollTo();
 }()); 
 
-//Burger handler//
+// Burger handler
 (function () {
-	const burgerItem = document.querySelector('.burger');
+	const burgerItem = document.querySelector('.hamburglar');
 	const menu = document.querySelector('.header__nav');
-	const menuCloseItem = document.querySelector('.header__nav-close')
+	const menuCloseItem = document.querySelector('.hamburglar')
 	const menuLinks = document.querySelectorAll('.header__link')
 	burgerItem.addEventListener('click', () => {
 		menu.classList.add('header__nav_active');
@@ -114,3 +114,25 @@ window.onload = function () {
 		}	
 	}
 }());
+// Бургер меню ico
+$('document').ready(function () {
+    var trigger = $('#hamburger'),
+        isClosed = true;
+
+    trigger.click(function () {
+      burgerTime();
+    });
+
+    function burgerTime() {
+      if (isClosed == true) {
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+    }
+
+  });
